@@ -1,16 +1,21 @@
 // This is a tsconfig.json intended to be used by packages in this monorepo.
 {
-  // https://www.typescriptlang.org/docs/handbook/compiler-options.html
   "compilerOptions": {
     "rootDir": ".",
     "importHelpers": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
 
+    "composite": true,
     "paths": {
       "foo": ["packages/foo/src/index.ts"],
     },
   },
+
+  "references": [
+    { "path": "packages/foo" },
+    { "path": "packages/bar" },
+  ],
 
   "exclude": ["node_modules", "tmp"],
 }
