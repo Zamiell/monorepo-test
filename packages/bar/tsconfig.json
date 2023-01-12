@@ -1,4 +1,7 @@
 {
-  "extends": "../../tsconfig.monorepo.json",
+  "extends": "../../tsconfig.json",
   "include": ["./src/**/*.ts"],
+  "references": [
+    { "path": "../foo" }
+  ]
 }

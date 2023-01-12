@@ -1,4 +1,7 @@
 {
-  "extends": "../../tsconfig.monorepo.json",
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "composite": true,
+  },
   "include": ["./src/**/*.ts"],
 }
